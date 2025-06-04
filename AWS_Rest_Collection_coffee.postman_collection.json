@@ -99,6 +99,61 @@
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
 			},
 			"response": []
+		},
+		{
+			"name": "Update Coffee Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"hot coffee late updated\",\r\n    \"price\": 589,\r\n    \"available\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://khll8s5etg.execute-api.us-east-1.amazonaws.com/coffee/c99",
+					"protocol": "https",
+					"host": [
+						"khll8s5etg",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"coffee",
+						"c99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Coffee AWS Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://khll8s5etg.execute-api.us-east-1.amazonaws.com/coffee/c99",
+					"protocol": "https",
+					"host": [
+						"khll8s5etg",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"coffee",
+						"c99"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
