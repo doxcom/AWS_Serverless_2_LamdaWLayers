@@ -4,8 +4,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import ItemDetails from "./ItemDetails";
+import { AuthProvider } from "react-oidc-context";
+
+const cognitoAuthConfig = {
+  authority: "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_JFJJscuX2",
+  client_id: "6cng94qjvpjuc9a5oha1julkcj",
+  redirect_uri: "http://localhost:5173",
+  response_type: "code",
+  scope: "email openid phone",
+};
 
 createRoot(document.getElementById('root')).render(
+  <AuthProvider {...cognitoAuthConfig}>
   <Router>
     <div>
       <Routes>
@@ -14,4 +24,5 @@ createRoot(document.getElementById('root')).render(
       </Routes>
     </div>
   </Router>
+  </AuthProvider>
 )
