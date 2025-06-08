@@ -14,3 +14,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 ## pending part: 1:22:00 https://www.youtube.com/watch?v=KoY6fS77pDc&t=4220s&ab_channel=TrickSumo
+
+
+## pending part 1:33. need to check why is not loading the coffee cards
